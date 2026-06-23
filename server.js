@@ -51,6 +51,9 @@ app.get("/products", async (req, res) => {
         `;
 
         values.push(limit);
+        console.log("lastCreatedAt =", lastCreatedAt);
+console.log("lastId =", lastId);
+console.log("values =", values);
 
         const result = await pool.query(
             query,
